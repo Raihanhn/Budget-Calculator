@@ -24,6 +24,8 @@ function App() {
       <ExpenseList expense={expense} easrly={early} />
       </main>
 
+      <div className="header">
+
       <h1>Early Pay Total: <span className='totall' >
          $ {early.reduce((acc, curr)=>{
           return (acc += curr.pay);
@@ -36,6 +38,8 @@ function App() {
           return (acc += curr.payment);
          },0)}
         </span> </h1>
+        </div>
+
     </div>
   )
 }
