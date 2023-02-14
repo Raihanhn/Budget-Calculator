@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from './ExpenseItem'
 
-const ExpenseList = () => {
+const ExpenseList = ({expense, early}) => {
   return (
     <div>ExpenseList
       <Item/>
