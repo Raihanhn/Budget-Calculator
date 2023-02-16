@@ -7,10 +7,10 @@ const ExpenseItem = ({expenses}) => {
     <li className='item'>
       <div className="info">
         <span className='expense'>{po}</span>
-        <span className='amount'>{invoiced} </span>
-        <span className='amount'>{due} </span>
-        <span className='amount'>${pay} </span>
-        <span className='amount'>${payment} </span>
+        <span className='invoiced'>{invoiced} </span>
+        <span className='due'>{due} </span>
+        <span className='pay'>${pay} </span>
+        <span className='payment'>${payment} </span>
       </div>
       <div>
         <button className="edit-btn" aria-label='edit button' >
