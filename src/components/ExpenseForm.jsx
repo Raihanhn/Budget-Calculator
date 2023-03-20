@@ -30,8 +30,8 @@ const ExpenseForm = () => {
           <label htmlFor="payment">Invoice Amount</label>
           <input type="text" className='form-control' id='payment' name='payment' placeholder='e.g. Amount' />
         </div>
-
       </div>
+      <button type='submit' className='btn' > Submit <MdSend className='btn-icon' /> </button>
     </form>
   )
 }

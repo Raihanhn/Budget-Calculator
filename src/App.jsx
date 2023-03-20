@@ -8,12 +8,36 @@ import { useState } from 'react';
 function App() {
 
   const see = [
-    {id:uuidv4(), po: "po1212", invoiced: "12/12/20", due: "12/23/23", pay: 120, payment: 1200  },
-    {id:uuidv4(), po: "po1212", invoiced: "12/12/20", due: "12/23/23", pay: 220, payment: 100  }
+    {id:uuidv4(), po: "po1212", invoiced: "12/12/20", due: "12/23/23", pay: 500, payment: 1200  },
+    {id:uuidv4(), po: "po1212", invoiced: "12/12/20", due: "12/23/23", pay: 400, payment: 800  }
   ];
 
   const [expense, setExpense] = useState(see);
   const [early, setEarly] = useState(see);
+  const [po, setPo] = useState("");
+  const [invoiced, setInvoiced] = useState("");
+  const [due, setDue] = useState("");
+  const [pay, setPay] = useState("");
+  const [payment, setPayment] = useState("");
+
+  const handlepo = e =>{
+    setPo(e.target.value);
+  };
+  const handleinvoiced = e =>{
+    setInvoiced(e.target.value);
+  };
+  const handledue = e =>{
+    setDue(e.target.value);
+  };
+  const handlepay = e =>{
+    setPay(e.target.value);
+  };
+  const handlepayment = e =>{
+    setPayment(e.target.value);
+  };
+  const handleSubmit = e =>{
+    e.preventDefault();
+  };
 
   return (
     <div className='main' >
@@ -21,7 +45,7 @@ function App() {
       <h1>Budget Calculator</h1>
       <main className="App">
       <ExpenseForm/>
-      <ExpenseList expense={expense} easrly={early} />
+      <ExpenseList expense={expense} early={early} />
       </main>
 
       <div className="header">
